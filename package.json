@@ -18,10 +18,13 @@
     }
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "electron": "^6.0.12",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-use-audio-player": "0.0.16",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",

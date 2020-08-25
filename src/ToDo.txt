@@ -1,0 +1,5 @@
+Timer -loop 
+audio-player-with loop in react
+Random-quote-generator in react  TICK TICK
+Styling
+Add Vector icons for different audio files
