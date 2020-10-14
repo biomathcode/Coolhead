@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/src/media
+/src/trash
 /.pnp
 .pnp.js
 
