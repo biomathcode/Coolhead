@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-
+import Twitter from '../Icons/svg/Twitter'
 
 const QuoteBlock = styled.blockquote`
     border: 4px solid black;
@@ -26,20 +26,23 @@ const Quotes = styled.p`
     }
 `
 const Quote = styled.p`
-    color: black;
+    color: white;
 `
 const AuthorName = styled.footer`
-    color: black;
+    color: white;
     border-radius: 5px;
 `
 const Button = styled.button`
-    color: blue;
+    color: black;
+    background-color: white;
     border: 2px solid  red;
     border-radius: 5px;
     &:hover {
-        color: white;
+        color: black;
         border-color: blue;
     }
+    padding: 5px;
+    margin: 5px;
     
 `
 class Quote_machine extends Component{
@@ -60,7 +63,6 @@ class Quote_machine extends Component{
         axios.get(url)
             .then(res => {
                 let data = res.data.quotes
-                console.log(data)
                 let quoteNum = Math.floor(Math.random() * data.length)
                 let randomQuote = data[quoteNum]
                 this.setState({
@@ -72,15 +74,21 @@ class Quote_machine extends Component{
     getNewQuote = () => {
         this.getQuote()
     }
+    
     render() {
         const {quote, author} = this.state
+        const twitterquote = "https://twitter.com/intent/tweet?text=" + quote + " by  ~" + author + " via Coolhead.in"
         return(
             <QuoteBlock>
                 <Quotes id='quote-box'>
                     <Quote>{quote}</Quote>
                     <AuthorName>{author}</AuthorName>
                 </Quotes>
-                <Button id='new-quote' className='buttons' onClick={this.getNewQuote}>New Quote</Button>
+                <Button id='' className='buttons' onClick={this.getNewQuote}>New Quote</Button>
+                <a href={twitterquote} rel="noopener noreferrer" target="_blank">
+                    <Twitter width={24} fill="#002BFF"/>
+                </a>
+                        
             </QuoteBlock>
             
         )

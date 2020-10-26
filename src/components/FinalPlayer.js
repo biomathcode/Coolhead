@@ -1,6 +1,7 @@
 //source :- https://stackoverflow.com/questions/47686345/playing-sound-in-reactjs
 
 import React, { useState, useEffect} from 'react';
+import Icon from '../Icons/IconProps';
 
 const useAudio = (url) => {
     const [audio] = useState(new Audio(url));
@@ -30,15 +31,14 @@ const useAudio = (url) => {
 
     return [playing, toggle, volume, handleVolume]
 }
-const Player = ({ url }) => {
+const Player = ({ url,vector}) => {
     const [playing, toggle, volume, handleVolume] = useAudio(url);
   
     return (
       <div>
         <button onClick={toggle}>
-        <span>
-            {playing ? "Pause" : "Play"}
-        </span></button>
+            <Icon name={vector} width={100} fill="#000" />
+        </button>
         <input type="range" value={Math.round(volume * 100)}  onChange={(e) => handleVolume(e.target.value / 100)}  />
       </div>
     );

@@ -3,6 +3,7 @@ import TypeSelect from './components/TypeSelect';
 import TimeDisplay from './components/TimeDisplay';
 import Controls from './components/Controls';
 import Shortcuts from './components/Shortcuts';
+import Clock from "./Media/clock-chimes.mp3";
 import './Timer.css'
 
 class Pomodoro extends Component {
@@ -23,7 +24,7 @@ class Pomodoro extends Component {
 
   static defaultProps = {
     types: [
-      { name: 'Pomodoro', time: 1500 },
+      { name: 'Pomodoro', time: 5 },
       { name: 'Short Break', time: 300 },
       { name: 'Long Break', time: 900 }
     ]
@@ -32,7 +33,7 @@ class Pomodoro extends Component {
   componentDidMount() {
     document.addEventListener('keyup', this.handleKeyUp);
     Notification.requestPermission();
-    this.sound = new Audio('bell.flac');
+    this.sound = new Audio(Clock);
     this.sound.preload = 'auto';
   }
 
