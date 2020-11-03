@@ -7,24 +7,23 @@ const SVG = ({
     stroke= "",
     width= "0%",
     className = "",
-    viewBox = "0 0 170 150"
+    viewBox = "0 0 81.29 139.97"
 }) => (
     <svg
         width={width}
         style={style}
         height={width}
         stroke={stroke}
-        fill={fill}
         stroke-width = "4px"
+        fill={fill}
         viewBox={viewBox}
         xmlns="http://www.w3.org/2000/svg"
         className={`svg-icon ${className || ""}`}
         xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-        <path
-          fill={fill}
-            d="M127.22,134.59A75.58,75.58,0,0,1,73.88,5.48a75.56,75.56,0,1,0,59.53,128.83C131.37,134.48,129.31,134.59,127.22,134.59Z" 
-        />
+        <path fill={fill} class="cls-1" d="M40.64,6.47s83.58,130,0,130S40.64,6.47,40.64,6.47Z" />
+        <path fill={fill} class="cls-1" d="M45.3,123.19c-1.28.1-2.62.14-4,.14-20.54,0-22.76-14.17-22.76-24.29" />
+        
     </svg>
 )
 

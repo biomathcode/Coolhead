@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 258">
+<style>
+    .rectangle{
+        fill: red;
+        color: aliceblue;
+    }
+</style>
+    <title>reactangle</title>
+    
+    <path class="rectangle" d="M65,1V257H1V1H65m1-1H0V258H66V0Z" />
+   
+</svg>

@@ -4,46 +4,47 @@ import styled from 'styled-components'
 import Twitter from '../Icons/svg/Twitter'
 
 const QuoteBlock = styled.blockquote`
-    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    
+`
+const Quotes = styled.div`
     margin: 5px;
     padding: 10px;
-    text-align: center;
-    min-width: 500px;
-    min-height: 200px;
-    max-width: 500px;
 `
-const Quotes = styled.p`
-    margin: 5px;
-    padding: 10px;
-    &:first-of-type:before{
-        content: '\201c';
-        position: absolute;
-        left: -.5em;
-    }
-    &:last-of-type:after{
-        content: '\201d';
-        position:absolute;
-    }
-`
-const Quote = styled.p`
+const Quote = styled.div`
     color: white;
+    font-size: 1rem;
 `
-const AuthorName = styled.footer`
+const AuthorName = styled.div`
     color: white;
     border-radius: 5px;
+    font-size: 1rem;
 `
 const Button = styled.button`
-    color: black;
-    background-color: white;
-    border: 2px solid  red;
+    color: white;
+    background-color: ${({theme}) => theme.primaryDark};
+    border: 2px solid  ${({theme}) => theme.secondaryDark};
+    padding: 6px;
     border-radius: 5px;
     &:hover {
-        color: black;
-        border-color: blue;
+        color: ${({theme}) => theme.primaryLight};
+        background-color: ${({theme}) => theme.secondaryDark};
+        border-color: ${({theme}) => theme.secondaryDark};
     }
-    padding: 5px;
-    margin: 5px;
+    cursor: pointer;
     
+`
+const SubContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px 20px;
+
 `
 class Quote_machine extends Component{
     constructor(props){
@@ -77,17 +78,22 @@ class Quote_machine extends Component{
     
     render() {
         const {quote, author} = this.state
-        const twitterquote = "https://twitter.com/intent/tweet?text=" + quote + " by  ~" + author + " via Coolhead.in"
+        const twitterquote = "https://twitter.com/intent/tweet?text=" + quote + " ~" + author + " via Coolhead.in"
         return(
             <QuoteBlock>
                 <Quotes id='quote-box'>
                     <Quote>{quote}</Quote>
-                    <AuthorName>{author}</AuthorName>
+                    <AuthorName>~ {author}</AuthorName>
                 </Quotes>
-                <Button id='' className='buttons' onClick={this.getNewQuote}>New Quote</Button>
+            <SubContainer>
+                {quote ? <Button className='buttons' onClick={this.getNewQuote}>New Quote</Button> :"Loading ..."}
+                
                 <a href={twitterquote} rel="noopener noreferrer" target="_blank">
                     <Twitter width={24} fill="#002BFF"/>
                 </a>
+
+            </SubContainer>
+                
                         
             </QuoteBlock>
             

@@ -22,39 +22,39 @@
 }
 
 .Controls button.start {
-    background: #D9534F;
+    background: #002BFF;
     color: #fff;
 }
 
 .Controls button.start:hover {
-    background: #b64441;
+    background: #001370;
 }
 
 .Controls button.reset {
     background: transparent;
     flex: 0;
     margin-right: 25px;
-    color: #888;
+    color: #586bcc ;
 }
 
 .Controls button.reset:hover {
-    color: #666;
+    color: #001370;
 }
 
 .Controls button.pause {
-    background: #eea73c;
+    background: #002BFF;
     color: #fff;
 }
 
 .Controls button.pause:hover {
-    background: #d3912f;
+    background: #001370;
 }
 
 .Controls button.resume {
-    background: #91b62d;
+    background: #002BFF;
     color: #fff;
 }
 
 .Controls button.resume:hover {
-    background: #7d9e23;
+    background: #001370;
 }

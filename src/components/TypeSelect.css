@@ -11,7 +11,7 @@
 
 .TypeSelect button {
     flex: 1;
-    border: 2px solid #ccc;
+    border: 2px solid yellowgreen;
     border-right: 0;
     background: transparent;
     font-family: 'Roboto', sans-serif;
@@ -28,12 +28,12 @@
 }
 
 .TypeSelect button:last-child {
-    border-right: 2px solid #ccc;
+    border-right: 2px solid yellowgreen;
     border-radius: 0 5px 5px 0;
 }
 
 .TypeSelect button.active {
     background: #fff;
-    color: #D9534F;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
+    color: #002BFF;
+    box-shadow: 0 3px 10px rgba(86, 22, 204, 0.12);
 }

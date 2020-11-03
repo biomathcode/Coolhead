@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 324">
+    <title>cylinder</title>
+    <defs>
+        <style>
+            .cyl{
+                
+            }
+        </style>
+    </defs>
+            <path class="cyl" fill="#720707"
+                d="M33,1A32,32,0,0,1,65,33V291a32,32,0,0,1-64,0V33A32,32,0,0,1,33,1m0-1A33,33,0,0,0,0,33V291a33,33,0,0,0,66,0V33A33,33,0,0,0,33,0Z" />
+   
+</svg>

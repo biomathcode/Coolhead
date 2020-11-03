@@ -3,7 +3,7 @@ import TypeSelect from './components/TypeSelect';
 import TimeDisplay from './components/TimeDisplay';
 import Controls from './components/Controls';
 import Shortcuts from './components/Shortcuts';
-import Clock from "./Media/clock-chimes.mp3";
+import Clock from "./Media/Ambience/clock-chimes.mp3";
 import './Timer.css'
 
 class Pomodoro extends Component {

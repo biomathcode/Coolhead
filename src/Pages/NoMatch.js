@@ -5,8 +5,9 @@ const Wrapper = styled.div`
   margin-left: 6em;
   margin-right: 6em;
 `;
-export const NoMatch = () => (
+const NoMatch = () => (
   <Wrapper>
     <h2>No Match</h2>
   </Wrapper>
 )
+export default NoMatch;

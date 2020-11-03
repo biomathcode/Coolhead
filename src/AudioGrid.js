@@ -1,44 +1,71 @@
 import React from 'react';
 import Player from './components/FinalPlayer'
 
+import BirdsChirping from './Media/Ambience/BirdsChirping.wav'
+import CargoTrain from './Media/Ambience/Cargo_train.mp3'
+import Dripping from './Media/Ambience/Dripping2.wav'
+import Forest from './Media/Ambience/Forest1.wav'
+import HeavyRain from './Media/Ambience/heavy_rain.mp3'
+import ThunderClose from './Media/Ambience/ThunderClose4.wav'
+import VinylCrackle from './Media/Ambience/VinylCrackle1.wav'
+import WaterFallStream from './Media/Ambience/WaterfallStream.wav'
+import WavesLight from './Media/Ambience/WavesLight1.wav'
+import WindChimes from './Media/Ambience/Windchimes1.wav'
+import Stream from './Media/Ambience/Stream1.wav'
+import RainLight from './Media/Ambience/Light1.wav'
+import styled from 'styled-components' 
 
-import Firefly from './Media/Firefly.mp3'
-import HeavyRain from './Media/heavy_rain.mp3'
-import IceSkating from './Media/ice-skating.mp3'
-import DogPanting from './Media/dog-panting-breathing-fast.mp3'
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 30px 30px;
+    grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . ."
+ 
+`
+const Header = styled.h2`
+    color: white;
+    cursor: default;
+    text-decoration: none;
+    
+    transition: transform 0.3s ease-in;
+    border-bottom: 0px solid yellow;
+    &:hover{
+        border-bottom: 2px solid #0496ff;    
+        border-radius: 1px;
+    }
+`
+const Container = styled.div`
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    align-items: start;
 
-//lofi_audio
-// import Ainouta from './Media/lofi_audio/Ainouta-WZwtfh1XSNU.mp3'
-// import Chikai from './Media/lofi_audio/Chikai-WnRSOVz_R0I.mp3'
-// import Gaishutsu from './Media/lofi_audio/Gaishutsu-zha7CGHDrrg.mp3'
-// import Habataku from './Media/lofi_audio/Habataku-WcygXfHR7-Q.mp3'
-// import Happa from './Media/lofi_audio/Happa-gGa42q1VbwI.mp3'
-// import Hinome from './Media/lofi_audio/Hinome-QSaZw4IMqM0.mp3'
-// import Ichiru from './Media/lofi_audio/Ichiru-Yg6ktp-lsf4.mp3'
-// import Kemuri from './Media/lofi_audio/Kemuri-q6hzm4SmjLM.mp3'
-// import Michikusa from './Media/lofi_audio/Michikusa-APECEIyDRtY.mp3'
-// import Murasaki from './Media/lofi_audio/Murasaki-ZzQHmT27NNE.mp3'
-// import Nangoku from './Media/lofi_audio/Nangoku-tJ6n825ILtc.mp3'
-// import Omoi from './Media/lofi_audio/Omoi-0fHhyK9o8vo.mp3'
-// import Osaka from './Media/lofi_audio/Osaka-Ncx5LeWXO4I.mp3'
-// import Ringo from './Media/lofi_audio/Ringo-MYTc5N24AjM.mp3'
-// import Shiranai from './Media/lofi_audio/Shiranai-QCElp9FWFYc.mp3'
-// import Tadaima from './Media/lofi_audio/Tadaima-JDRn-4zYopg.mp3'
-// import Wakare from './Media/lofi_audio/Wakare-rG_bvce2LpQ.mp3'
-// import Yawaraka from './Media/lofi_audio/Yawaraka-ZZ4GoGnPr9g.mp3'
-// import Yuki from './Media/lofi_audio/Yuki-eTqv06OvwL8.mp3'
-// import Yutaka from './Media/lofi_audio/Yutaka-fYSpmmCpJjo.mp3'
-import "./audiogrib.css"
-
-
-
-
+    min-width: 300px;
+    border: 1px solid #0496ff;
+    border-radius: 5px;
+    padding: 10px;
+    
+`
 const AudioGrib = () => {
     return (
-        <div className="container">
-            <Player url={Firefly} vector="night"/>
-            
-        </div>
+        <>
+            <Container>
+            <Header>Ambience</Header>
+            <Grid>
+                <Player  url={BirdsChirping} vector="night"/>
+                <Player  url={Forest} vector="wind"/>
+                <Player  url={Stream} vector="water"/>
+                <Player url={WavesLight} vector="wave"/>
+                <Player url={RainLight} vector="rain"/>
+                <Player url={WindChimes} vector="coffee"/>
+                <Player url={ThunderClose} vector="thunder" />
+                <Player url={CargoTrain} vector="train" />
+            </Grid>
+            </Container>
+        </>
     )
 }
 export default AudioGrib

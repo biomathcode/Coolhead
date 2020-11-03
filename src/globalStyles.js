@@ -8,16 +8,15 @@ export const GlobalStyles = createGlobalStyle`
 
     *, *::after, *::before {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
     }
 
     body {
-        align-items: center;
         background: #0D0C1D;
         color: #EFFFFA;
-        display: flex;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        height: 100vh;
-        justify-content: center;
         text-rendering: optimizeLegibility;
     }
     h1 {
