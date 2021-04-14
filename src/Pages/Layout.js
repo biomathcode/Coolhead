@@ -7,7 +7,7 @@ import Productivity from './Productivity';
 import Meditation from './Meditation'
 import Audiobooks from './Audiobooks'
 import Podcasts from './Podcasts'
-import Sidebar from '../UI/Sidebar/Sidebar';
+//import Sidebar from '../UI/Sidebar/Sidebar';
 import styled from 'styled-components'
 import NoMatch from './NoMatch'
 const SubContainer = styled.div`
@@ -33,10 +33,13 @@ const Container = styled.div`
 const Layout = () => {
     return (
     <>
-        <Sidebar/>
+        {//<Sidebar/>
+        }
         <Container>
         <QuoteMachine/>
         <SubContainer>
+        <AudioGrib/>
+        <Timer/>
         <Switch>  
             <Route path="/" exact component= {Productivity} />
             <Route path="/productivity" component={Productivity}/>
@@ -45,8 +48,8 @@ const Layout = () => {
             <Route path="/podcasts" component={Podcasts}/>
             <Route component={NoMatch} />
         </Switch>
-            <Timer/>
-            <AudioGrib/>
+            
+            
         </SubContainer>
         </Container>
         

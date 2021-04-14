@@ -1,19 +1,26 @@
-import {useEffect} from 'react'
+import React,{useCallback} from 'react';
+import {useDropzone} from 'react-dropzone'
 
-export const useOnClickOutside = (ref, handler) => {
-    useEffect(() => {
-        const listener = event => {
-            if (!ref.current || ref.current.contains(event.target)) {
-                return ;
+function MyDropZone() {
+    const onDrop = useCallback(acceptedFiles => {
+        acceptedFiles.forEach((file) => {
+            
+            console.log(file.path)
+        });
+        console.log(acceptedFiles)
+    }, [])
+    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+    return(
+        <div {...getRootProps()}>
+            <input {...getInputProps()} />
+            {
+                isDragActive?
+                <p>Drop the files here ...</p> :
+                <p>Drag 'n' drop some files here, or click to select</p>
             }
-            handler(event);
-        }
-        document.addEventListener('mousedown', listener);
+        </div>
+    )
+}
 
-        return () => {
-            document.removeEventListener('mousedown', listener);
-        };
-    },
-    [ref,handler],
-    );
-};
+export default MyDropZone;
+

@@ -1,0 +1,89 @@
+.fab {
+    z-index: 10;
+    position: fixed;
+	 bottom: 16px;
+	 right: 16px;
+	 text-align: center;
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ .fab .trigger, .fab .action {
+	 border-radius: 50%;
+	 box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+	 cursor: pointer;
+}
+ .fab .trigger:active, .fab .action:active {
+	 opacity: 0.7;
+}
+ .fab .trigger {
+	 position: relative;
+	 background: blue;
+	 color: #fff;
+	 height: 56px;
+	 width: 56px;
+	 line-height: 56px;
+	 vertical-align: middle;
+	 font-size: 1.5em;
+	 z-index: 1;
+}
+ .fab .action {
+	 position: absolute;
+	 top: 0;
+	 margin: 0 8px;
+	 background: blue;
+	 color: black;
+	 height: 40px;
+	 width: 40px;
+	 line-height: 40px;
+	 transition: transform 0.4s ease;
+}
+ .fab .actions {
+	 opacity: 0;
+	 transition: opacity 0.4s ease;
+}
+ .fab.open .actions {
+	 opacity: 1;
+}
+ .fab.open .actions .action:nth-child(1) {
+	 transform: translateY(-48px);
+}
+ .fab.open .actions .action:nth-child(2) {
+	 transform: translateY(-96px);
+}
+ .fab.open .actions .action:nth-child(3) {
+	 transform: translateY(-144px);
+}
+ .fab.open .actions .action:nth-child(4) {
+	 transform: translateY(-192px);
+}
+ .fab.open .tooltip {
+	 opacity: 1;
+	 transform: translateY(-50%) scale(1);
+	 right: 64px;
+	 transition-delay: 0.2s;
+}
+ .fab .tooltip {
+	 position: absolute;
+	 top: 50%;
+	 right: 0;
+	 width: 50vw;
+	 transform: translateY(-50%) scale(0);
+	 transform-origin: right center 0;
+	 text-align: right;
+	 transition: all 0.4s ease;
+	 opacity: 0;
+	 color: #eee;
+}
+
+.overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(220,220,220,0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  will-change: opacity;
+}
