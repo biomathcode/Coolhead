@@ -1,4 +1,5 @@
 {
+  "homepage": "https://pratiksharm.github.io/Coolhead",
   "name": "electron-react-typescript-app",
   "version": "0.1.0",
   "private": true,
@@ -34,6 +35,8 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b coolhead -d build",
     "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
     "electron-build": "electron-builder",
     "start": "cross-env BROWSER=none npm run react-start",
@@ -63,7 +66,6 @@
     "electron-builder": "^21.2.0",
     "electron-is-dev": "^1.1.0",
     "electron-reload": "^1.5.0",
-    "gh-pages": "^3.1.0",
     "nodemon": "^1.19.3"
   }
 }
