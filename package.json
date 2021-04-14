@@ -36,7 +36,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b coolhead -d build",
+    "deploy": "gh-pages -d build",
     "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
     "electron-build": "electron-builder",
     "start": "cross-env BROWSER=none npm run react-start",
