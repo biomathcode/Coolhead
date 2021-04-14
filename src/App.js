@@ -8,7 +8,6 @@ import {theme} from './theme'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Layout from './Pages/Layout'
 import FloatingButton from './UI/FAB/FloatingButton'
-import MediaPlayer from './UI/MediaPlayer/mediaplayer'
 
 function App(){
     return (
@@ -20,7 +19,7 @@ function App(){
          <Layout/>
         <FloatingButton/>       
         </Router>     
-        <MediaPlayer/>
+
         </ThemeProvider>
     </>
       
